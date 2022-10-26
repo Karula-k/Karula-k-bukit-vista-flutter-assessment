@@ -1,0 +1,26 @@
+[
+  {
+    "id": "0",
+    "name": "lady gaga",
+    "image": "https://dummyimage.com/400x400/000/fff",
+    "origin": "brazil"
+  },
+  {
+    "id": "1",
+    "name": "orgendo",
+    "image": "https://dummyimage.com/400x400/000/fff",
+    "origin": "managaskar"
+  },
+  {
+    "id": "2",
+    "name": "mayhem",
+    "image": "https://dummyimage.com/400x400/000/fff",
+    "origin": "papua new gunie"
+  },
+  {
+    "id": "3",
+    "name": "somkers",
+    "image": "https://dummyimage.com/400x400/000/fff",
+    "origin": "mock town"
+  }
+]

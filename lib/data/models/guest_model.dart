@@ -1,8 +1,8 @@
 import 'package:bukit_vista_flutter_assessment/domain/entities/guest.dart';
 
-class GuestMode extends Guest {
-  const GuestMode(super.name, super.urlImg, super.origin, super.bookHistory);
+class GuestModel extends Guest {
+  const GuestModel(super.name, super.urlImg, super.origin);
 
-  factory GuestMode.fromJson(Map<String, dynamic> json) => GuestMode(
-      json['name'], json['urlImg'], json['origin'], json['bookHistory']);
+  factory GuestModel.fromJson(Map<String, dynamic> json) =>
+      GuestModel(json['name'], json['image'], json['origin']);
 }

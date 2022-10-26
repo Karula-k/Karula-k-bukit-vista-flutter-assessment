@@ -1,5 +1,5 @@
 import 'package:bukit_vista_flutter_assessment/common/failure.dart';
-import 'package:bukit_vista_flutter_assessment/domain/entities/guest.dart';
+import 'package:bukit_vista_flutter_assessment/domain/entities/guest_detail.dart';
 import 'package:bukit_vista_flutter_assessment/domain/repositories/guest_repository.dart';
 import 'package:dartz/dartz.dart';
 
@@ -8,7 +8,7 @@ class GetGuestData {
 
   GetGuestData(this.repository);
 
-  Future<Either<Failure, Guest>> excute(String id) {
+  Future<Either<Failure, GuestDetail>> excute(int id) {
     return repository.getGuestData(id);
   }
 }
