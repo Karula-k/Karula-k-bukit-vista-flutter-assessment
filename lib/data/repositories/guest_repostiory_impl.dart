@@ -8,12 +8,12 @@ import 'package:bukit_vista_flutter_assessment/domain/repositories/guest_reposit
 import 'package:dartz/dartz.dart';
 
 class GuestRepositoryImpl implements GuestRepository {
-  final LocalDataSourcesImpl localDataSourcesImpl;
-  GuestRepositoryImpl({required this.localDataSourcesImpl});
+  final LocalDataSources localDataSources;
+  GuestRepositoryImpl({required this.localDataSources});
   @override
   Future<Either<Failure, GuestDetail>> getGuestData(int id) async {
     try {
-      return Right(await localDataSourcesImpl.gettingGuestDetail(id));
+      return Right(await localDataSources.gettingGuestDetail(id));
     } on FileSystemException {
       return const Left(
           FileFailure('Something wrong in the file we try to retrive'));
@@ -23,7 +23,7 @@ class GuestRepositoryImpl implements GuestRepository {
   @override
   Future<Either<Failure, List<Guest>>> getListGuestData() async {
     try {
-      return Right(await localDataSourcesImpl.gettingDataGuest());
+      return Right(await localDataSources.gettingDataGuest());
     } on FileSystemException {
       return const Left(
           FileFailure("Something wrong in the file we try to retrive"));

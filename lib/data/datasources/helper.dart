@@ -1,9 +1,5 @@
-import 'dart:io';
+import 'package:flutter/services.dart';
 
-String readFilepath(String name) {
-  var dir = Directory.current.path;
-  if (dir.endsWith('/lib')) {
-    dir = dir.replaceAll('/lib', '');
-  }
-  return '$dir/lib/common/json/$name';
+Future<String> readFilepath(String name) async {
+  return await rootBundle.loadString('json/$name');
 }
